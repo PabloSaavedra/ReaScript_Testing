@@ -136,6 +136,9 @@ function draw(state)
       end
       --reaper.Undo_EndBlock('Insert envelope palette', -1)
       reaper.PreventUIRefresh(-1)
+      reaper.TrackList_AdjustWindows(false)
+      reaper.UpdateArrange()
+      reaper.UpdateTimeline()
     end
   end
   state.last_grid = p_grid
